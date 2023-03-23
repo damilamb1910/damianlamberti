@@ -1,0 +1,61 @@
+.acerca__container{
+    background-color: #0D0D0D;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.acerca__head{
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    margin-top: 250px;
+    justify-content: center;
+    align-items: center;
+}
+
+.acerca__head h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: Oswald, sans-serif;
+    font-size: 5em;
+}
+
+.acerca__head img{
+    width: 300px;
+}
+
+
+
+.acerca__body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.acerca__body p{
+    font-size: 20px;
+    color:white;
+    line-height: 30px;
+    width: 60%;
+}
+.acerca__body img{
+    width: 200px;
+    margin-right: 40px;
+}
+.flechas{
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+
+.acerca__card{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

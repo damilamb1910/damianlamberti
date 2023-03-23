@@ -1,0 +1,111 @@
+.logo__gris{
+    width: 50px;
+}
+
+.logo__redes{
+   width: 42px;
+   height: 42px;
+   border: solid #393939;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50px;
+   cursor: pointer;
+    
+}
+
+footer{
+    height: 300px;
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+}
+
+.logos__redes__container{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70%;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    
+    
+}
+
+footer h3{
+    font-size: 18px;
+}
+
+footer h4{
+    font-size: 14px;
+    padding-bottom: 50px;
+}
+
+.hablame{
+    color: #0D0D0D;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    width: 80%;
+    padding: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 20px;
+    background: #393939;
+box-shadow: inset 19px 19px 38px #171717,
+            inset -19px -19px 38px #5b5b5b;
+}
+
+.hablame h4{
+    
+    
+    padding: 0;
+    text-shadow: 1px 2px 3px #555555;
+    font-size: 25px;
+}
+
+.hablame button{
+    font-size: 24px;
+    border :solid black;
+    padding: 10px;
+    padding-right: 40px;
+    padding-left: 40px;
+    cursor: pointer;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #3d3d3d, #333333);
+box-shadow:  19px 19px 38px #171717,
+             -19px -19px 38px #5b5b5b;
+
+            
+}
+
+.hablame button:hover{
+    box-shadow:0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #8247D6,
+    0 0 82px #8247D6,
+    0 0 92px #8247D6,
+    0 0 102px #8247D6,
+    0 0 151px #8247D6; ;
+    border :solid #fff;
+    color: #fff;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #8247D6,
+    0 0 82px #8247D6,
+    0 0 92px #8247D6,
+    0 0 102px #8247D6,
+    0 0 151px #8247D6;
+}
+
+.hablame p{
+    width: 250px;
+    color: #ffffff;
+}

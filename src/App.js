@@ -11,9 +11,10 @@ import Musica from './components/Música/Musica';
 import Edicion from './components/edicion/Edicion';
 import Ilustraciones from './components/ilustraciones/Ilustraciones';
 import Programacion from './components/programacion/Programacion';
+import CartContext from './context/CartContext';
 
 function App() {
-  const [loading,setLoading]=useState(false)
+{/*const [loading,setLoading]=useState(false)
 
 
 useEffect(()=>{
@@ -21,22 +22,32 @@ useEffect(()=>{
     setTimeout(()=>{
       setLoading(false)
     },3000)
-},[]
+},[] 
 
-)
+ {loading ? <Loading /> :
+
+}
+
+*/} 
+
+
   return (
     <>
-    {loading ? <Loading /> :
+   
     <>
+    <CartContext>
+
+    
     <BrowserRouter>
     <Nabvar/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/acerca" element={<Acerca/>}/>
-        <Route path="/musica" element={<Musica/>}/>
+        <Route path="/productos/:categoriaId" element={<Musica/>}/>
         <Route path="/edicion" element={<Edicion/>}/>
         <Route path="/ilustraciones" element={<Ilustraciones/>}/>
         <Route path="/programacion" element={<Programacion/> }/>
+        
         
           
         
@@ -47,7 +58,8 @@ useEffect(()=>{
     
     
     <Footer/>
-    </>}
+    </CartContext>
+    </>
     </>
   );
 }

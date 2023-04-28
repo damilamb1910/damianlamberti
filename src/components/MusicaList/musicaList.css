@@ -1,0 +1,8 @@
+.musicalist__container{
+    background-color: #0d0d0d;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}

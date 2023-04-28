@@ -1,10 +1,21 @@
 import React from 'react'
+import YouTubePreview from '../youtubePreview/YouTubePrevieb'
+import "./musicaList.css"
 
-const MusicaList = () => {
+
+
+const MusicaList = ({listProductos,categoria}) => {
   return (
-    <div>
-      <h2>soy una lista de musica</h2>
+    <div className='musicalist__container'>
+
+{listProductos.map((prod, i)=> 
+
+
+<YouTubePreview key={`${prod.titulo}-${i}`} producto={prod} />)}
+    
+   
     </div>
+    
   )
 }
 

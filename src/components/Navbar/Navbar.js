@@ -5,9 +5,25 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import OutsideAlerter from "../funciotn/OutsideAlert"
+import { useEffect } from "react"
 
 
 const Navbar=()=>{
+    const [windowSize, setWindowSize] = useState(window.innerWidth);
+    useEffect(() => {
+        function handleResize() {
+          setWindowSize(window.innerWidth);
+        }
+    
+        window.addEventListener('resize', handleResize);
+    
+        return () => window.removeEventListener('resize', handleResize);
+      }, []);
+    const comprobar=()=>{
+        if(menu===true){
+            toggleMenu()
+        }
+    }
     const variants = {
         open: { opacity: 1, y:-50 },
         closed: { opacity: 0, y:-100 },
@@ -19,13 +35,14 @@ const cambiar=()=>{
     const toggleMenu=()=>{
         setMenu(!menu)
         
+        
     }
 
     
 
     const [dropdown,setDropdown]=useState(false)
     return(
-        <header>
+        <header onClick={comprobar}>
        <Link to={"/"}><img className="logo" src={logo} alt="" /></Link>
        <button onClick={toggleMenu} className="menu-boton">
            <svg className="menu" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"  viewBox="0 0 16 16">
@@ -33,17 +50,30 @@ const cambiar=()=>{
 </svg>
            </button>
            <nav className={`header__nav ${menu ? 'isActive' : ''} `}>
-            <ul  className="nav__ul">
+            
+            
+{windowSize < 768 ? (
+           <ul  className="nav__ul">
             <Link to={"/acerca"}><li className="nav__item">Acerca de mi</li></Link>
-            <li onClick={()=>{setDropdown(dropdown => !dropdown)}  } className="nav__item">Skills
-
-            <motion.nav
+                <Link to={'productos/musica'} ><li className="nav__item">Música</li></Link> 
+                <Link to={'/edicion'}><li className="nav__item">Edición de video</li></Link>
+                <Link to={'/programacion'}><li className="nav__item">Programación</li></Link>
+                <Link to={'/ilustraciones'}><li className="nav__item">Ilustraciones digitales</li></Link>
+                 
+            <li className="nav__item">Redes</li>
+            
+            </ul>
+                ):(
+                    <ul  className="nav__ul">
+            <Link to={"/acerca"}><li className="nav__item">Acerca de mi</li></Link>
+                    <li onClick={()=>{setDropdown(dropdown => !dropdown)}  } className="nav__item">Skills
+                <motion.nav
       animate={dropdown ? "open" : "closed"}
       variants={variants}
     >
         <OutsideAlerter cambiar={cambiar}>
         <ul className={`dropdown ${dropdown ? 'isActive': ''}`} >
-                <Link to={'/musica'} ><li>Música</li></Link> 
+                <Link to={'/productos/musica'} ><li>Música</li></Link> 
                 <Link to={'/edicion'}><li>Edición de video</li></Link>
                 <Link to={'/programacion'}><li>Programación</li></Link>
                 <Link to={'/ilustraciones'}><li>Ilustraciones digitales</li></Link>
@@ -51,13 +81,16 @@ const cambiar=()=>{
 
         </OutsideAlerter>
            
-    </motion.nav>
-
-            
-            </li>
-            <li className="nav__item">Redes</li>
+    </motion.nav></li>
+     
+    <li className="nav__item">Redes</li>
             
             </ul>
+    )}
+            
+
+            
+           
         </nav>
        
         

@@ -1,3 +1,16 @@
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #0D0D0D;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #8348D8;
+    border-radius: 20px;
+  }
+
 .recomendaciones{
     padding-top: 200px;
     background-color: #0D0D0D;
@@ -7,6 +20,7 @@
     justify-content: center;
     align-content: center;
     align-items: center;
+
     
 }
 
@@ -17,14 +31,16 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 1270px;
+    width:90vw;
     flex-wrap: wrap;
 }
 .card{
     box-shadow:  29px 29px 59px #050505,
     -29px -29px 59px #151515;
     border-radius: 20px;
-    width:250px ;
+    height: 450px;
+    width:280px ;
+    
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -33,14 +49,100 @@
     align-content: center;
     margin: 60px;
 }
+.card p{
+    overflow-y: scroll;
+    scrollbar-color:#0D0D0D;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.card__head{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
 .card__image{
-    margin-top: 10px;
-    height: 150px;
-    clip-path: circle(30% at center);
+    height: 180px;
+    clip-path: circle(45% at center);
+}
+.card__name{
+    
+    font-size: 18px;
+}
+.card h4{
+    font-size: 13px;
+}
+.card span{
+    font: 14px;
+    cursor: pointer;
+color: #3BC1FF;
 }
 
-@media only screen and  (max-width:600px) {
-    .recomendaciones{
-        display: none;
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .card{
+       
+        width:40vw ;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        
     }
- }
+    .card__container{
+        width: 100%;
+    }
+  }
+
+
+@media only screen and (max-width: 480px) {
+
+    .card p{
+       
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .card{
+       
+        width:90vw ;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        
+    }
+    .card__name{
+    
+        font-size: 20px;
+    }
+    .card h4{
+        font-size: 15px;
+    }
+    .card span{
+        font: 20px;
+        
+    }
+    .card__head{
+        margin-top: 0px;
+        margin-bottom: 0x;
+        
+        
+    }
+    .card__image{
+        height: 50vw;
+        clip-path: circle(40% at center);
+    }
+
+    .recomendaciones{
+        padding-top: 20vw;
+        
+    }
+    .card__container{
+        margin-top: 50px;
+        padding-bottom:10px ;
+        
+    }
+  }

@@ -59,3 +59,29 @@
     justify-content: center;
     align-items: center;
 }
+@media only screen and  (max-width:600px) {
+    .acerca__head{
+        flex-direction: column;
+        margin-top: 200px;
+    }  
+    .acerca__head img{
+        width: 200px;
+    }
+    .acerca__head h2{
+        font-size: 3em
+    }
+    .acerca__card{
+        flex-direction:column-reverse;
+        
+    }
+    .acerca__body p{
+        width: 90%;
+    }
+    .acerca__body img{
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .flechas{
+        margin-bottom: 50px;
+    }
+}

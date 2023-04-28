@@ -2,8 +2,23 @@ import React from 'react'
 import './acerca.css'
 import { motion } from "framer-motion"
 import Recomendaciones from '../Recomendaciones/Recomendaciones'
+import { useState, useEffect } from 'react'
 
 const Acerca = () => {
+
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+    useEffect(() => {
+        function handleResize() {
+          setWindowSize(window.innerWidth);
+        }
+    
+        window.addEventListener('resize', handleResize);
+    
+        return () => window.removeEventListener('resize', handleResize);
+      }, []);
+
+
+  window.scrollTo(0, 0);
   return (
     <div className='acerca__container'>
       <div className='acerca__head'>
@@ -37,7 +52,38 @@ const Acerca = () => {
       
       </motion.div>
       </div>
-      <div className='acerca__body'>
+
+
+ { windowSize < 768 ? <div className='acerca__body'>
+      <div>
+      <div className='acerca__card'>
+      
+      <p>¡Hola! Me llamo Damián y tengo 34 años. Soy originario de Buenos Aires, Argentina, la cuna del fútbol y campeona del mundo. Desde pequeño, siempre he sido una persona curiosa y me encanta entender cómo funcionan las cosas. Por esta razón, decidí estudiar en la escuela técnica donde finalmente obtuve mi título como técnico electromecánico. Estoy orgulloso de mi formación y siempre busco aplicar mis conocimientos para solucionar problemas y mejorar el mundo que me rodea.</p>
+      <img src={require('../../assets/avatar-damian/2.png')} alt="" />
+     
+      
+      </div>
+      </div>
+      
+      
+      <div>
+      <div className='acerca__card'>
+      <img src={require('../../assets/avatar-damian/4.png')} alt="" />
+      <p>Desde hace varios años, he estado aprendiendo de manera autónoma acerca de programas que siempre han despertado mi interés, como Photoshop, Illustrator, entre otros. Sin embargo, mi curiosidad fue más allá y decidí profundizar en el conocimiento sobre la programación y las tecnologías relacionadas. Este no es el primer caso en el que me ha sucedido algo así. Durante mi juventud, aprendí a tocar la guitarra y luego, en el conservatorio, completé mi formación básica. Sin embargo, sentí la necesidad de conocer cómo producía el sonido mi guitarra eléctrica, por lo que decidí estudiar luthería. Esta sed de conocimiento ha sido una constante en mi vida y siempre estoy dispuesto a aprender algo nuevo.</p>
+      </div>
+      </div>
+      
+      <div>
+      <div className='acerca__card'>
+      
+      <p>Actualmente, estoy llevando a cabo mis estudios pedagógicos en la Universidad Tecnológica Nacional (UTN) con el fin de habilitar mi título como Técnico Electromecánico y ejercer como docente. Además, estoy estudiando la tecnicatura en programación en la Universidad de Hurlingham (UNAHUR). Mi interés por la tecnología y la innovación no termina aquí, ya que tengo planificado estudiar sobre inteligencia artificial, un área que últimamente ha despertado mi gran interés. Pueden ver algunas de mis ilustraciones realizadas con Midjourney y Stable Diffusion en esta página, que son prueba de mi pasión por este campo.</p>
+
+      <img src={require('../../assets/avatar-damian/5.png')} alt="" />
+      </div>
+      </div>
+      
+
+      </div> : <div className='acerca__body'>
       <motion.div initial={{ opacity: 0, y:200 }}
   whileInView={{ opacity: 1, y:0 }}
   transition={{ duration: 2, times: [0, 1] }}
@@ -75,7 +121,9 @@ const Acerca = () => {
       </motion.div>
       
 
-      </div>
+      </div> }
+
+      
       <Recomendaciones/>
       
     </div>

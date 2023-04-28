@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import './home.css'
 import Typed from 'typed.js';
 import ClipLoader from "react-spinners/ClipLoader";
+import { db } from "../../firebase/firebase"
+import { getDocs, collection } from "firebase/firestore"
 
 const Home = () => {
   
@@ -10,7 +12,7 @@ const Home = () => {
 	const typed = useRef();
 
   useEffect(() => {
-    
+    window.scrollTo(0, 0);
     const options = {
     	strings: [
         'Soy <i>Diseñador web</i> ',
@@ -45,6 +47,14 @@ const Home = () => {
     }
     
   }, [])
+
+  const getUsers = async () => {
+    const usersCollection = collection(db, 'products')
+    const data = await getDocs(usersCollection)
+    console.log(data.docs.map(doc => doc.data()))
+  }
+  
+  getUsers()  
 
   return (
     

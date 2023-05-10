@@ -56,8 +56,8 @@ const cambiar=()=>{
            <ul  className="nav__ul">
             <Link to={"/acerca"}><li className="nav__item">Acerca de mi</li></Link>
                 <Link to={'productos/musica'} ><li className="nav__item">Música</li></Link> 
-                <Link to={'/edicion'}><li className="nav__item">Edición de video</li></Link>
-                <Link to={'/programacion'}><li className="nav__item">Programación</li></Link>
+                <Link to={'productos/edicion'}><li className="nav__item">Edición de video</li></Link>
+                <Link to={'productos/programacion'}><li className="nav__item">Programación</li></Link>
                 <Link to={'/ilustraciones'}><li className="nav__item">Ilustraciones digitales</li></Link>
                  
             <li className="nav__item">Redes</li>
@@ -74,8 +74,8 @@ const cambiar=()=>{
         <OutsideAlerter cambiar={cambiar}>
         <ul className={`dropdown ${dropdown ? 'isActive': ''}`} >
                 <Link to={'/productos/musica'} ><li>Música</li></Link> 
-                <Link to={'/edicion'}><li>Edición de video</li></Link>
-                <Link to={'/programacion'}><li>Programación</li></Link>
+                <Link to={'/productos/edicion'}><li>Edición de video</li></Link>
+                <Link to={'/productos/programacion'}><li>Programación</li></Link>
                 <Link to={'/ilustraciones'}><li>Ilustraciones digitales</li></Link>
             </ul>
 
@@ -83,7 +83,7 @@ const cambiar=()=>{
            
     </motion.nav></li>
      
-    <li className="nav__item">Redes</li>
+    <li onClick={()=>{window.open('https://damilamb1910.github.io/links/', '_blank');}} className="nav__item">Redes</li>
             
             </ul>
     )}

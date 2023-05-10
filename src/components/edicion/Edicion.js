@@ -5,14 +5,14 @@ import { db } from "../../firebase/firebase"
 import { getDocs,collection,query,where } from "firebase/firestore"
 import { useEffect,useState } from "react"
 import { useParams } from "react-router-dom";
+import Loading from '../Loading/Loading'
 
 const Edicion = () => {
-    
     const [listProductos,setListProductos]=useState([])
   const [loading,setLoading]=useState(true)
   
-
-
+  
+  
 
 const {categoriaId}=useParams()
 
@@ -26,38 +26,69 @@ useEffect(()=>{
             const q=query(prodCollection,where('categoria','==',categoriaId))
             getDocs(q)
         .then(data => setListProductos(data.docs.map(product=>
-             ({...product.data(),id:product.id})))).finally(()=>{setLoading(false)})
-             console.log(q)
+             ({...product.data(),id:product.id}))))
+            
         }else{
         
         getDocs(prodCollection)
         .then(data => setListProductos(data.docs.map(product=>
-             ({...product.data(),id:product.id})))).finally(()=>{setLoading(false)})
-        }console.log(prodCollection)
+             ({...product.data(),id:product.id}))))
+            
+        }
         },[categoriaId])
            
+
+const cambiarLoad=()=>{
+  
+    setLoading(false)
+
     
+  
+}
+
+    const preguntarCategoria=(categoriaId)=>{
+if (categoriaId==='musica'){
+
+  return("https://firebasestorage.googleapis.com/v0/b/damianlambert.appspot.com/o/backMusic.jpg?alt=media&token=17b007ae-aca8-47e8-b0c0-19fe43d2e808")
+}else if(categoriaId==='edicion'){
+ 
+return( "https://firebasestorage.googleapis.com/v0/b/damianlambert.appspot.com/o/backedicion.jpg?alt=media&token=0d3ccb7e-19df-43d6-a4d2-295af09fa41c")
+}else if(categoriaId==='programacion'){
+ 
+  return( "https://firebasestorage.googleapis.com/v0/b/damianlambert.appspot.com/o/backprogramacion.jpg?alt=media&token=59799363-7cb2-4996-8675-cbd75918d165")
+  }
+    }
          
         
         
+     
         
         
-        
-        
+    
             return(
             <>
-            
-            <img src={require("../../assets/backedicion.jpg")} alt="" />
+          <div className='contain'>
+          <Loading onClick={()=>{console.log('click')}} loading={loading}/>  
+             
+             <img onLoad={cambiarLoad}  src={preguntarCategoria(categoriaId)}   alt="" />
             <div className='titulo__musica'>
            
-            <h2 >Música</h2>
-            <h3>Te invito a ver y escuchar un poco de lo que me gusta hacer...</h3>
+            <h2 className='titulo' >{categoriaId}</h2>
+            <h3>Te invito a conocer un poco de lo que me gusta hacer...</h3>
             </div>
+            <MusicaList listProductos={listProductos} categoria={categoriaId}/>
+          
+          </div>
+             
+              
+            
+             
+            
 
-            {
+            
 
-                loading ? <h3>cargando</h3> :<MusicaList listProductos={listProductos} categoria={categoriaId}/>
-            }
+              
+            
             
             
             </>

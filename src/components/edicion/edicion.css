@@ -1,0 +1,21 @@
+.titulo__musica{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20vw;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px  black;
+}
+
+.titulo__musica h2{
+    font-size: 80px;
+    margin-bottom: 80px;
+text-transform: uppercase;
+}
+.contain{
+    background-color: #0D0D0D;
+}

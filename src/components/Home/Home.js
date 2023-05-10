@@ -1,18 +1,20 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './home.css'
 import Typed from 'typed.js';
-import ClipLoader from "react-spinners/ClipLoader";
 import { db } from "../../firebase/firebase"
 import { getDocs, collection } from "firebase/firestore"
+import Loading from '../Loading/Loading';
 
 const Home = () => {
   
   const el = useRef();
   // Create reference to store the Typed instance itself
 	const typed = useRef();
+  const [loading,setLoading]=useState(true)
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    setLoading(true)
     const options = {
     	strings: [
         'Soy <i>Diseñador web</i> ',
@@ -48,21 +50,22 @@ const Home = () => {
     
   }, [])
 
-  const getUsers = async () => {
-    const usersCollection = collection(db, 'products')
-    const data = await getDocs(usersCollection)
-    console.log(data.docs.map(doc => doc.data()))
-  }
   
-  getUsers()  
+  
+   
+
+const cambiarLoad=()=>{
+  setLoading(false)
+}
 
   return (
     
     <>
+    <Loading loading={loading}/>
      <div className='section__presentación'>
-      <img className="logo__completo" src={require('../../assets/logo2.png')} alt=""></img>
+      <img onLoad={cambiarLoad} className="logo__completo" src={require('../../assets/logo2.png')} alt=""></img>
       <div className='tipeo'>
-      <span style={{ whiteSpace: 'pre' }} ref={el} />
+      <span  style={{ whiteSpace: 'pre' }} ref={el} />
       </div>
      
     </div> 

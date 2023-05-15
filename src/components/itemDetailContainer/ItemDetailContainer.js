@@ -8,7 +8,8 @@ import ItemDetail from '../itemDetail/ItemDetail';
 
 
 const ItemDetailContainer = () => {
-
+    
+  
     const [producto,setProducto]=useState({})
     
 const {id}=useParams()
@@ -16,6 +17,7 @@ const {id}=useParams()
     
     useEffect(()=>{
         
+        window.scrollTo(0, 0)
         const productCollection=collection(db,'products')
         const refDoc = doc(productCollection,id)
         getDoc(refDoc)
@@ -27,13 +29,17 @@ const {id}=useParams()
             )
         })
        },[id])
+
+       
+
+
     return(
         <>
          
         
-       
+         
     
-    <ItemDetail  producto={producto}/>
+    <ItemDetail  producto={producto} />
       
         
         </>

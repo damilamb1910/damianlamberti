@@ -5,6 +5,7 @@
     
 }
 .itemDetail{
+    color: #CCCCCC;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -13,6 +14,7 @@
 .titulo__itemDetail{
     font-size: 50px;
     color: white;
+    text-transform: uppercase;
 }
 .head__itemDetail{
     display: flex;
@@ -38,6 +40,9 @@
 
 .carrousel__container{
    width: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 .seccion__itemDetail{
     display: flex;
@@ -45,11 +50,47 @@
     justify-content: space-around;
    margin-left: 100px;
    margin-right: 100px;
+   margin-top: 50px;
 }
 
 .tecnologias__contain{
     width: 50%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
+}
+
+.programacion__botones{
+    border :solid black;
+    padding: 10px;
+    padding-right: 40px;
+    padding-left: 40px;
+    cursor: pointer;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #3d3d3d, #333333);
+
+}
+
+.programacion__botones:hover{
+    box-shadow:0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #8247D6,
+    0 0 82px #8247D6,
+    0 0 92px #8247D6,
+    0 0 102px #8247D6,
+    0 0 151px #8247D6; ;
+    border :solid #fff;
+    color: #fff;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #8247D6,
+    0 0 82px #8247D6,
+    0 0 92px #8247D6,
+    0 0 102px #8247D6,
+    0 0 151px #8247D6;
 }

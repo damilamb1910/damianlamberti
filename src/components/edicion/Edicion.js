@@ -9,8 +9,8 @@ import Loading from '../Loading/Loading'
 
 const Edicion = () => {
     const [listProductos,setListProductos]=useState([])
-  const [loading,setLoading]=useState(true)
   
+  const [loading,setLoading]=useState(true)
   
   
 
@@ -19,6 +19,7 @@ const {categoriaId}=useParams()
 useEffect(()=>{
         window.scrollTo(0, 0)
         setLoading(true)
+
         const prodCollection=collection(db,'products')
     
          if(categoriaId){
@@ -40,11 +41,12 @@ useEffect(()=>{
 
 const cambiarLoad=()=>{
   
-    setLoading(false)
-
     
-  
+      setLoading(false)
+    
 }
+
+
 
     const preguntarCategoria=(categoriaId)=>{
 if (categoriaId==='musica'){
@@ -68,7 +70,7 @@ return( "https://firebasestorage.googleapis.com/v0/b/damianlambert.appspot.com/o
             return(
             <>
           <div className='contain'>
-          <Loading onClick={()=>{console.log('click')}} loading={loading}/>  
+          <Loading  loading={loading}/>  
              
              <img onLoad={cambiarLoad}  src={preguntarCategoria(categoriaId)}   alt="" />
             <div className='titulo__musica'>
@@ -76,7 +78,7 @@ return( "https://firebasestorage.googleapis.com/v0/b/damianlambert.appspot.com/o
             <h2 className='titulo' >{categoriaId}</h2>
             <h3>Te invito a conocer un poco de lo que me gusta hacer...</h3>
             </div>
-            <MusicaList listProductos={listProductos} categoria={categoriaId}/>
+            <MusicaList  listProductos={listProductos} categoria={categoriaId}/>
           
           </div>
              

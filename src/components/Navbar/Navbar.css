@@ -76,6 +76,25 @@ box-shadow: inset 20px 20px 60px #0d0d0d,
             
  }
 
+
+ @media only screen and  (max-width:850px) {
+  
+  .dropdown li{
+    padding-left: 20px;
+  transition: all 1s ease-in-out;
+  
+  color: white !important;
+  background-color: #1D1D1D;
+  background: #1D1D1D;
+box-shadow: inset 20px 20px 60px #0d0d0d,
+            inset -20px -20px 60px #2d2d2d;
+  }
+
+   
+       
+}
+
+
  @media only screen and  (max-width:600px) {
     .menu-boton{
         display:flex;

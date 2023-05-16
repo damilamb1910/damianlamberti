@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './home.css'
 import Typed from 'typed.js';
-import { db } from "../../firebase/firebase"
-import { getDocs, collection } from "firebase/firestore"
 import Loading from '../Loading/Loading';
 
 const Home = () => {
@@ -40,11 +38,10 @@ const Home = () => {
       
     };
     
-    // elRef refers to the <span> rendered below
+   
     typed.current = new Typed(el.current, options);
     return () => {
-      // Make sure to destroy Typed instance during cleanup
-      // to prevent memory leaks
+      
       typed.current.destroy();
     }
     

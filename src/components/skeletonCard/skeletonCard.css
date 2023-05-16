@@ -1,0 +1,43 @@
+
+  
+  .card__item__programacion.skeleton {
+    background-color: #726f6f;
+    border-radius: 8px;
+    padding: 16px;
+  }
+  
+  .skeleton__image {
+    width: 300px;
+    height: 150px;
+    background-color: #cac7c7;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .skeleton__content {
+    margin-bottom: 12px;
+  }
+  
+  .skeleton__line {
+    width: 100%;
+    height: 12px;
+    background-color: #e1e1e1;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+  
+  /* Animación opcional para el esqueleto */
+  @keyframes skeletonLoading {
+    0% {
+      background-position: -200px 0;
+    }
+    100% {
+      background-position: 200px 0;
+    }
+  }
+  
+  .skeleton__line {
+    background: linear-gradient(90deg, #726f6f 25%, #f1f1f1 50%, #726f6f 75%);
+    background-size: 200px 100%;
+    animation: skeletonLoading 1.5s infinite linear;
+  }

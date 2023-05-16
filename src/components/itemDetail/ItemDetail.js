@@ -2,18 +2,22 @@ import React, { useEffect, useRef, useState } from 'react'
 import ReactPlayer from 'react-player/lazy'
 import "./itemDetail.css"
 import Carrousel from '../carrousel/Carrousel';
+import Loading from '../Loading/Loading';
 
 
 
 const ItemDetail = ({producto}) => {
-  
+  const [loading,setLoading]=useState(true)
   const [isPlaying, setIsPlaying] = useState(false);
   const playerRef = useRef(null);
   const handlePlayerReady = () => {
     playerRef.current?.getInternalPlayer()?.play();
     setIsPlaying(true);
+    setLoading(false)
   };
-
+  const cambiarLoad=()=>{
+    setLoading(false)
+  }
 
 
 
@@ -21,7 +25,7 @@ const ItemDetail = ({producto}) => {
 
    <>
 
-
+<Loading loading={loading}/>
 <div className='itemDetail'>
       <div className='head__itemDetail' >
         <h2 className='titulo__itemDetail'>{producto.titulo}</h2>

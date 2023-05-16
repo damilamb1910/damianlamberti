@@ -1,20 +1,42 @@
-import React, { useState, useEffect } from 'react';
+
+
+
 import './itemProgramacion.css'
+import SkeletonCard from '../skeletonCard/SkeletonCard'
+import { useState, useEffect } from 'react'
+
 
 
 const ItemProgramacion = ({ producto }) => {
 
-
-
+const[loading,setLoading]=useState(true)
+const[display,setDisplay]=useState('display__none')
+const cambiartodo=()=>{
+setDisplay('card__item__programacion')
+setLoading(false)
+}
 
 
 
   return (
-    <div className='card__item__programacion'>
-<img src={producto.img} alt="" />
-<h3>{producto.titulo}</h3>
-<h4>{producto.miniDescripcion}</h4>
-    </div>
+    <>
+    {loading && <SkeletonCard/>
+      
+    }
+      <div className={display}>
+     
+    <img onLoad={cambiartodo} src={producto.img } alt="" />
+    <h3>{producto.titulo }</h3>
+    <h4>{producto.miniDescripcion }</h4>
+        </div>
+      
+      
+     
+    </>
+
+    
+
+    
     
   )
 }

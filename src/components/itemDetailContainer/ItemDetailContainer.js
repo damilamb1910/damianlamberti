@@ -9,8 +9,9 @@ import ItemDetail from '../itemDetail/ItemDetail';
 
 const ItemDetailContainer = () => {
     
-  
+    
     const [producto,setProducto]=useState({})
+    
     
 const {id}=useParams()
 
@@ -35,7 +36,7 @@ const {id}=useParams()
 
     return(
         <>
-         
+        
         
          
     

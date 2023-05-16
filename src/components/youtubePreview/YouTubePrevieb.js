@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import YouTube from 'react-youtube';
 import "./youtubePreview.css"
+import SkeletonCard from '../skeletonCard/SkeletonCard';
 
 const YouTubePreview = ({ producto }) => {
 
-
-
+  const[display,setDisplay]=useState('display__none')
+  const [loading,setLoading]=useState(true)
 const [preview, setPreview] = useState(null);
 const [activeVideo,setActiveVideo]=useState(false)
+const cambiarLoad=()=>{
+  setDisplay('card__video')
+setLoading(false)
+}
 
 
 
@@ -26,9 +31,14 @@ const previewUrl = `https://img.youtube.com/vi/${producto.videoId}/mqdefault.jpg
 
 
   return (
-    <div className='card__video'>
+    <>
     
-      <img onClick={ cambiar } src={preview} alt="Video preview" />
+
+    {loading && <SkeletonCard/>}
+
+    <div className={display}>
+    
+      <img onLoad={cambiarLoad} onClick={ cambiar } src={preview} alt="Video preview" />
    
       
     
@@ -39,6 +49,7 @@ const previewUrl = `https://img.youtube.com/vi/${producto.videoId}/mqdefault.jpg
     
     <h4>{producto.titulo}</h4>
   </div>
+  </>
   )
 }
 

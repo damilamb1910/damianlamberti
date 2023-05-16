@@ -18,7 +18,7 @@ const Recomendaciones = () => {
         }} className='card__span'>SOLA GRATIA</span> </h4>
         </div>
         
-        <p>Si estás buscando un profesional para editar tus imágenes, definitivamente te recomiendo a Damian. Recientemente, Damian editó algunas imágenes para mí y su trabajo es excelente. Es muy recomendable, para un trabajo bien echo ¡necesitamos profesionales avocados a su trabajo como Damian!</p>
+        <p>Si estás buscando un profesional para editar tus imágenes, definitivamente te recomiendo a Damian. Recientemente, Damian editó algunas imágenes para mí y su trabajo es excelente. Es muy recomendable, para un trabajo bien hecho ¡necesitamos profesionales avocados a su trabajo como Damian!</p>
     </div>
     <div className="card__recomendaciones">
         <div className='card__head'>

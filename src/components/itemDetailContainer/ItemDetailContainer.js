@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { db } from "../../firebase/firebase"
 import { getDoc,collection,doc } from "firebase/firestore"
 import ItemDetail from '../itemDetail/ItemDetail';
+import ItemDetailIlustraciones from '../itemDetailIlustraciones/ItemDetailIlustraciones';
 
 
 const ItemDetailContainer = () => {
@@ -36,11 +37,11 @@ const {id}=useParams()
 
     return(
         <>
+        {console.log(producto.categoria)}
         
-        
-         
+        {producto.categoria=== 'programacion' ? <ItemDetail  producto={producto} /> : <ItemDetailIlustraciones producto={producto}/>} 
     
-    <ItemDetail  producto={producto} />
+   
       
         
         </>

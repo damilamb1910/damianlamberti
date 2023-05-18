@@ -58,6 +58,8 @@ return( "https://firebasestorage.googleapis.com/v0/b/damianlambert.appspot.com/o
 }else if(categoriaId==='programacion'){
  
   return( "https://firebasestorage.googleapis.com/v0/b/damianlambert.appspot.com/o/backprogramacion.jpg?alt=media&token=59799363-7cb2-4996-8675-cbd75918d165")
+  }else if(categoriaId==='ilustraciones'){
+    return("https://firebasestorage.googleapis.com/v0/b/damianlambert.appspot.com/o/back_ilustraciones.jpg?alt=media&token=1979b4a5-668f-4493-bc86-5ed9e0471853")
   }
     }
          

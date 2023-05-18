@@ -76,7 +76,7 @@ const cambiar=()=>{
                 <Link to={'/productos/musica'} ><li>Música</li></Link> 
                 <Link to={'/productos/edicion'}><li>Edición de video</li></Link>
                 <Link to={'/productos/programacion'}><li>Programación</li></Link>
-                <Link to={'/ilustraciones'}><li>Ilustraciones digitales</li></Link>
+                <Link to={'/productos/ilustraciones'}><li>Ilustraciones digitales</li></Link>
             </ul>
 
         </OutsideAlerter>

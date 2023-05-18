@@ -15,9 +15,7 @@ const ItemDetail = ({producto}) => {
     setIsPlaying(true);
     setLoading(false)
   };
-  const cambiarLoad=()=>{
-    setLoading(false)
-  }
+  
 
 
 

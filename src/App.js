@@ -11,6 +11,7 @@ import Ilustraciones from './components/ilustraciones/Ilustraciones';
 
 import CartContext from './context/CartContext';
 import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer';
+import ItemDetailIlustraciones from './components/itemDetailIlustraciones/ItemDetailIlustraciones';
 
 function App() {
 
@@ -32,7 +33,7 @@ function App() {
         <Route path="/musica" element={<Musica/>}/>
         <Route path="/productos/:categoriaId" element={<Edicion/>}/>
         <Route path="/ilustraciones" element={<Ilustraciones/>}/>
-        
+       
         
         
           

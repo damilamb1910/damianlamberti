@@ -1,0 +1,35 @@
+.img__detail{
+    height: 100%;
+    width: auto;
+    border-radius: 10px;
+}
+.img__container{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    cursor: pointer;
+}
+
+.img__modal{
+    
+    height:  90vh;
+    width: auto;
+    
+    
+}
+
+.img__modal__container{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 12;
+        background-color: rgba(15, 9, 9, 0.6);
+}

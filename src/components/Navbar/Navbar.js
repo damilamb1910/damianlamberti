@@ -58,7 +58,7 @@ const cambiar=()=>{
                 <Link to={'productos/musica'} ><li className="nav__item">Música</li></Link> 
                 <Link to={'productos/edicion'}><li className="nav__item">Edición de video</li></Link>
                 <Link to={'productos/programacion'}><li className="nav__item">Programación</li></Link>
-                <Link to={'/ilustraciones'}><li className="nav__item">Ilustraciones digitales</li></Link>
+                <Link to={'productos/ilustraciones'}><li className="nav__item">Ilustraciones digitales</li></Link>
                  
             <li className="nav__item">Redes</li>
             

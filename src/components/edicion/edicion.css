@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
+    z-index: 2;
     top: 20vw;
     width: 100%;
     flex-direction: column;
@@ -18,4 +19,31 @@ text-transform: uppercase;
 }
 .contain{
     background-color: #0D0D0D;
+    
 }
+
+@media only screen and  (max-width:850px) {
+  
+    
+    }
+
+
+    @media only screen and  (max-width:600px) {
+        .contain{
+            padding-top: 80px;
+            
+        }
+
+        .titulo__musica h2{
+            font-size: 40px;
+            margin-top: 40px;
+           
+        }
+
+        .titulo__musica h3{
+            font-size: 20px;
+            
+           
+        }
+             
+     }    

@@ -33,3 +33,20 @@
     z-index: 12;
         background-color: rgba(15, 9, 9, 0.6);
 }
+@media only screen and  (max-width:600px) {
+    
+    .info1__itemDetail{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    .img__container{
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        cursor: pointer;
+    }
+ }

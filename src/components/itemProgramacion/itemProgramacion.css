@@ -1,6 +1,7 @@
 .card__item__programacion img{
     width: 300px;
     border-radius: 10px;
+
 }
 
 .card__item__programacion h3{
@@ -22,3 +23,11 @@
 .display__none{
     display: none;
 }
+
+@media only screen and  (max-width:600px) {
+    .card__item__programacion{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    
+    }
+ }

@@ -54,8 +54,7 @@ Si estás buscando a alguien en quien puedas confiar para que haga un trabajo de
         }} className='card__span'>FATUGRAB</span> </h4>
         </div>
         
-        <p>Damián es muy creativo, responsable y cumplidor. Además, su personalidad es admirable, siendo una buena persona que transmite confianza y credibilidad.
-Si estás buscando a alguien en quien puedas confiar para que haga un trabajo de calidad, no dudes en contactar a Damian, te aseguro que no te vas a arrepentir.</p>
+        <p>¡Estoy encantado con los servicios de Damián! Contraté su experiencia en desarrollo web para crear mi página de venta de insumos de serigrafía y no podría estar más satisfecho. Su profesionalismo, atención personalizada y diseño creativo hicieron que mi página web sea atractiva y funcional. ¡Recomiendo sin dudarlo sus servicios!</p>
     </div>
 
 

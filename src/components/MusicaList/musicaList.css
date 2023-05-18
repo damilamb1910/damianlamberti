@@ -6,3 +6,10 @@
     align-items: center;
     margin-top: 100px;
 }
+
+@media only screen and  (max-width:600px) {
+    .musicalist__container{
+        flex-direction: column;
+    }
+         
+ }

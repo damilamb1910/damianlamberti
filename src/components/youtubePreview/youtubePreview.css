@@ -8,7 +8,7 @@ left: 0;
 right: 0;
 bottom: 0;
 z-index: 9999;
-    background-color: rgba(255, 0, 0, .5);
+    background-color: rgba(15, 9, 9, 0.6);
    
     
     
@@ -31,3 +31,11 @@ z-index: 9999;
     margin-left: 20px;
     margin-right: 20px;
 }
+
+@media only screen and  (max-width:600px) {
+    .card__video{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    
+    }
+ }

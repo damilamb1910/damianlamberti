@@ -1,39 +1,23 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-
 import './footer.css'
 
 const Footer = () => {
 
-  const handleClickLinkdin=(e)=>{
-    if(e.target.attributes.id.value==='linkedin'){
-      window.open('https://www.linkedin.com/in/damian-lamberti-74b6771a3', '_blank')
-    }else if(e.target.attributes.id.value==='facebook'){
-      window.open('https://www.facebook.com/damian.lamberti.9', '_blank')
-    }else if(e.target.attributes.id.value==='instagram'){
-      window.open('https://www.instagram.com/damianlamberti/', '_blank')
-    }else if(e.target.attributes.id.value==='github'){
-      window.open('https://github.com/damilamb1910', '_blank')
-    }else if(e.target.attributes.id.value==='whatsapp'){
-      window.open('https://wa.me/1136684089', '_blank')
-    }
-    
-    console.log(e.target.attributes.id.value)
-  }
+  
 
   return (
     <footer>
       <div className='hablame'>
         <h4> ¿Tenés un proyecto en mente?</h4>
         <p>Contame eso que estás pensando hacer, tal vez juntos podamos lograrlo...</p>
-        <button id='whatsapp' onClick={handleClickLinkdin}>🤙 Hablemos!</button>
+        <button id='whatsapp' onClick={()=>{window.open('https://wa.me/1136684089', '_blank')}}>🤙 Hablemos!</button>
       </div>
 <img className='logo__gris' src={require('../../assets/logo_gris.png')} alt="" />
       <h3>Viviendo, aprendiendo y subiendo de nivel un día a la vez.</h3>
 
 
       <div  className='logos__redes__container'>
-<div id='linkedin' onClick={handleClickLinkdin}  className='logo__redes'>
+<div id='linkedin' onClick={()=>{window.open('https://www.linkedin.com/in/damian-lamberti-74b6771a3', '_blank')}}  className='logo__redes'>
 
 
 <svg   xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
@@ -45,7 +29,7 @@ const Footer = () => {
 
 </div>
 
-<div id='facebook' onClick={handleClickLinkdin} className='logo__redes'>
+<div id='facebook' onClick={()=>{window.open('https://www.facebook.com/damian.lamberti.9', '_blank')}} className='logo__redes'>
 
 
 <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
@@ -57,7 +41,7 @@ const Footer = () => {
 
 </div>
 
-<div id='github' onClick={handleClickLinkdin} className='logo__redes'>
+<div id='github' onClick={()=>{window.open('https://github.com/damilamb1910', '_blank')}} className='logo__redes'>
 
 
 
@@ -69,7 +53,7 @@ const Footer = () => {
 
 </div>
 
-<div id='instagram' onClick={handleClickLinkdin} className='logo__redes'>
+<div id='instagram' onClick={()=>{window.open('https://www.instagram.com/damianlamberti/', '_blank')}} className='logo__redes'>
 
 
 <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
@@ -81,7 +65,7 @@ const Footer = () => {
 
 </div>
 
-<div id='whatsapp' onClick={handleClickLinkdin} className='logo__redes'>
+<div id='whatsapp' onClick={()=>{window.open('https://wa.me/1136684089', '_blank')}} className='logo__redes'>
 
 
 

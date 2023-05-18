@@ -9,6 +9,7 @@ a{
 .menu-boton{
     display: none;
     margin-right: 1em;
+    color: #8448D8;
    
   }
   .nav__ul{
@@ -32,6 +33,7 @@ header {
     align-items: center;
     font-family: 'Oswald', sans-serif;
     position: fixed;
+    z-index: 4;
     height: 80px;
     width: 100%;
     background-color: rgba(27, 26, 26, 0.05);
@@ -100,8 +102,9 @@ box-shadow: inset 20px 20px 60px #0d0d0d,
         display:flex;
       }
       header{
-        position: relative;
+        position: fixed;
       z-index: 9999;
+      background-color: #1D1D1D;
       }
     .header__nav{
         width: 100%;
@@ -114,6 +117,7 @@ box-shadow: inset 20px 20px 60px #0d0d0d,
       opacity: 0;
       transition: all .5s ease;
       background-color: #1D1D1D;
+     
       
       
       
@@ -125,13 +129,16 @@ box-shadow: inset 20px 20px 60px #0d0d0d,
         opacity: 1;
         position: relative;
       z-index: 9999;
+
         
       }
 
       .nav__ul{
-        flex-direction: column;
+        flex-direction: column !important;
       background-color: #1D1D1D;
       margin-top: 0px;
+      padding-left: 0;
+      
       
       }
       

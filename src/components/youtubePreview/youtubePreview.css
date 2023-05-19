@@ -21,8 +21,8 @@ z-index: 9999;
 .youtube{
     display: flex;
     align-content: center;
-    width: 44vw;
-    height: 50vh;
+    width: 100%;
+    height: auto;
 }
 .card__video{
     height: 200px;

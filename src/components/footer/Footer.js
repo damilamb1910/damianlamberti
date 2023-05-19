@@ -10,7 +10,7 @@ const Footer = () => {
       <div className='hablame'>
         <h4> ¿Tenés un proyecto en mente?</h4>
         <p>Contame eso que estás pensando hacer, tal vez juntos podamos lograrlo...</p>
-        <button id='whatsapp' onClick={()=>{window.open('https://wa.me/1136684089', '_blank')}}>🤙 Hablemos!</button>
+        <button id='whatsapp' onClick={()=>{window.open('https://wa.me/541136684089', '_blank')}}>🤙 Hablemos!</button>
       </div>
 <img className='logo__gris' src={require('../../assets/logo_gris.png')} alt="" />
       <h3>Viviendo, aprendiendo y subiendo de nivel un día a la vez.</h3>
@@ -65,7 +65,7 @@ const Footer = () => {
 
 </div>
 
-<div id='whatsapp' onClick={()=>{window.open('https://wa.me/1136684089', '_blank')}} className='logo__redes'>
+<div id='whatsapp' onClick={()=>{window.open('https://wa.me/541136684089', '_blank')}} className='logo__redes'>
 
 
 

@@ -14,6 +14,18 @@ z-index: 9999;
     
 }
 
+.svg-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    cursor: pointer;
+    width: 80px;
+  height: 80px; 
+  color: #8348D8;
+  }
+
 .none{
     display: none;
 }
@@ -21,10 +33,11 @@ z-index: 9999;
 .youtube{
     display: flex;
     align-content: center;
-    width: 100%;
+    width: 50%;
     height: auto;
 }
 .card__video{
+    position: relative;
     height: 200px;
     width: 350px;
     margin-top: 20px;
@@ -32,10 +45,27 @@ z-index: 9999;
     margin-right: 20px;
 }
 
+.card__video img{
+cursor: pointer;
+border: solid;
+border-radius: 10px;
+}
+.card__video img:hover{
+    border: solid #8348D8;
+}
+
 @media only screen and  (max-width:600px) {
     .card__video{
         margin-top: 30px;
         margin-bottom: 30px;
+        margin-left: 0px;
+    margin-right: 0px;
     
+    }
+    .youtube{
+        display: flex;
+        align-content: center;
+        width: 100%;
+        height: auto;
     }
  }

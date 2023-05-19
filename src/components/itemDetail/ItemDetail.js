@@ -7,6 +7,8 @@ import Loading from '../Loading/Loading';
 
 
 const ItemDetail = ({producto}) => {
+  
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [loading,setLoading]=useState(true)
   const [isPlaying, setIsPlaying] = useState(false);
   const playerRef = useRef(null);
@@ -16,6 +18,15 @@ const ItemDetail = ({producto}) => {
     setLoading(false)
   };
   
+  useEffect(() => {
+    window.scrollTo(0, 0);
+      setWindowWidth(window.innerWidth);
+    
+    
+    
+   
+    
+  }, [windowWidth]);
 
 
 
@@ -31,12 +42,17 @@ const ItemDetail = ({producto}) => {
       </div>
       <div className='info1__itemDetail'>
         <h4>{producto.descripcion}</h4>
-      <ReactPlayer  volume={0} muted={true} autoPlay controls  loop={true} playing={isPlaying} playsinline={true} onReady={handlePlayerReady} url={producto.video} />
+       
+       <ReactPlayer width= {(windowWidth < 780 ) ? `100%`: `50%`} volume={0} muted={true} autoPlay controls  loop={true} playing={isPlaying} playsinline={true} onReady={handlePlayerReady} url={producto.video} />
+      
+        
+      
+      
       </div>
       <div className='seccion__itemDetail'>
       <div className='carrousel__container'>
         
-        {producto.imagenes &&  <Carrousel  images={producto.imagenes}/> }
+        {producto.imagenes &&  <Carrousel windowWidth={windowWidth}  images={producto.imagenes}/> }
       
       </div>
       <div className='tecnologias__contain'>

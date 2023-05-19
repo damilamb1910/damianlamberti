@@ -94,3 +94,58 @@
     0 0 102px #8247D6,
     0 0 151px #8247D6;
 }
+
+@media only screen and  (max-width:600px) {
+    
+    .video__itemDetail{
+       width: 10px;
+       height: 50px;
+    }
+    .info1__itemDetail{
+        margin: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+       
+    }
+    .info1__itemDetail h4{
+        width: 95%;
+        
+    }
+
+    .titulo__itemDetail{
+        font-size: 40px;
+        text-align: center;
+    }
+    .head__itemDetail{
+        
+        padding-bottom: 50px;
+        
+    }
+    .seccion__itemDetail{
+        height: 800px;
+        width: 100%;
+    flex-direction: column;
+    justify-content: center;
+   margin-left: 0px;
+   margin-right: 0px;
+   margin-top: 50px;
+   align-items: center;
+    }
+
+    .tecnologias__contain{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    .programacion__botones{
+        width: 90%;
+        
+        
+        
+        
+    
+    }
+ }

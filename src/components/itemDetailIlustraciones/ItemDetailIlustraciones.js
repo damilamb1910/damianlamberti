@@ -33,7 +33,7 @@ const cambiarDisplayNone=()=>{
              <h2 className='titulo__itemDetail'>{producto.titulo}</h2>
       
          </div>
-         <div className='info1__itemDetail'>
+         <div className='info1__itemDetail_ilustraciones'>
              <h4>{producto.descripcion}</h4>
              <div className='img__container'>
              <img onClick={cambiarDisplay} className='img__detail' onLoad={cambiar} src={producto.img} alt="" />
@@ -41,7 +41,7 @@ const cambiarDisplayNone=()=>{
              
          </div>
 
-         <div className='seccion__itemDetail'>
+         <div className='seccion__itemDetail__ilustraciones'>
       
      
              <h4 onClick={()=>{window.open(`${producto.linkpublicacion}`, '_blank')}} className='programacion__botones'> 🔗 Ver publicacion en Instagram</h4>

@@ -86,7 +86,7 @@ Si estás buscando a alguien en quien puedas confiar para que haga un trabajo de
 
     <div className="card__recomendaciones">
         <div className='card__head'>
-        <img className="card__image" src={require('../../assets/fatima.jpg')} alt=""/>
+        <img className="card__image" src={require('../../assets/david.jpg')} alt=""/>
         <h3 className='card__name'>DAVID ARDILA</h3>
         <h4>Músico y productor <span onClick={()=>{
             window.open('https://www.instagram.com/davidardila04/', '_blank')
